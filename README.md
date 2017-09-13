@@ -25,7 +25,7 @@ The current build status is live displayed as blinking (while build is running) 
 8. right click on the setting and click on "Test tool"
 
 
-[Blink(1) Control GUI](Blink1-Control-settings.jpg)
+![Blink(1) Control GUI](Blink1-Control-settings.jpg)
 
 If anything goes wrong, just open a command line an run `poll-jenkins.bat` manually. 
 
