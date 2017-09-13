@@ -24,7 +24,6 @@ The current build status is live displayed as blinking (while build is running) 
 7. add a "script" and select the `poll-jenkins.bat` and select your polling frequency - e.g. 15 seconds
 8. right click on the setting and click on "Test tool"
 
-
 ![Blink(1) Control GUI](Blink1-Control-settings.jpg)
 
 If anything goes wrong, just open a command line an run `poll-jenkins.bat` manually. 
