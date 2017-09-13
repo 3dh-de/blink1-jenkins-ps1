@@ -1,7 +1,7 @@
 # blink1-jenkins-ps1
 PowerShell script to poll JENKINS project status to display ist with blink(1) USB RGB LED
 
-Polls JENKINS JSON API for a given project and job to control the USB RGB LED "ThingM blink(1)".
+Polls JENKINS JSON API for a given project and job to control the USB RGB LED [ThingM blink(1)](https://blink1.thingm.com/)
 This script is used to add so called 'extreme feedback devices' to all develeopers machines.
 
 The current build status is live displayed as blinking (while build is running) or slow glowing red / yellow / green colors.
