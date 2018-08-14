@@ -1,5 +1,5 @@
 # blink1-jenkins-ps1
-PowerShell script to poll JENKINS project status to display ist with blink(1) USB RGB LED
+PowerShell script to poll JENKINS / HUDSON project status to display ist with blink(1) USB RGB LED
 
 Polls JENKINS JSON API for a given project and job to control the USB RGB LED [ThingM blink(1)](https://blink1.thingm.com/)
 This script is used to add so called 'extreme feedback devices' to all develeopers machines.
@@ -14,6 +14,52 @@ The current build status is live displayed as blinking (while build is running) 
 - user account with read rights for JENKINS project
 
 ## Setup
+
+### Windows
+
+The PowerShell script to evaluate the Jenkins/Hudson JSON build status doesn't work on network shares / network profiles due to security reasons.
+
+Therefore the delivered batch-startscript assumes that all files are installed under **%PROGRAM_FILES%\blink1-jenkins-ps1\**.
+
+1. create directory %PROGRAM_FILES%\blink1-jenkins-ps1\
+2. copy files **blink1-jenkins.ps1** and **poll-jenkins.bat** into thid dir
+
+### Other OS
+
+Currently this script is only tested under Windows 7+10, but should work with [PowerShell for Linux](https://docs.microsoft.com/de-de/powershell/scripting/setup/installing-powershell-core-on-linux?view=powershell-6) comparably, too.
+
+### Jenkins URL and login data
+
+All login credentials and the Jenkins host + project path must be updated inside the **blink1-jenkins.ps1**
+
+e.g.:
+```
+# settings - EDIT HERE!!!
+$jenkins_host 	= "https://myserver"
+$jenkins_project= "MyProject/job/MyBuildJob"
+$jenkins_user	= "myuser"
+$jenkins_pass 	= "ThisPasswordIsSecretLOL"
+# end of settings
+```
+
+### Blink(1) color patterns
+
+In order to set your LED depending on the Jenkins / Hudson build status the Blink(1) GUI tool needs matching color patterns:
+
+|| Jenkins build color || Blink(1) color pattern ||
+| red         		| FAILURE |
+| blue       		| SUCCESS |
+| green      		| SUCCESS |
+| yellow     		| UNSTABLE|
+| disabled   		| UNSTABLE|
+| red_anime  		| FAILURE_RUN|
+| blue_anime		| SUCCESS_RUN|
+| green_anime		| SUCCESS_RUN|
+| yellow_anime	| UNSTABLE_RUN|
+| disabled_anime |	UNSTABLE_RUN|
+
+
+### Blink(1) task
 
 1. clone this repository to any dir, reachable by an absolute path starting with a drive letter (the blink(1) software has problems with network shares)
 2. edit the `blink1-jenkins.ps1` to enter your JENKINS host url, job name, user and password
