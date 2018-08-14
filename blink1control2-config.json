@@ -24,30 +24,36 @@
     "playingSerialize": true
   },
   "patterns": [
-	{
-		"name":"FAILURE",
-		"pattern":"6,#690000,1,0,#f00000,2,0"
-	},
-	{
-		"name":"FAILURE_RUN",
-		"pattern":"6,#696969,2,0,#f00000,2,0"
-	},
-	{
-		"name":"SUCCESS",
-		"pattern":"6,#5ce700,2,0,#3a9300,2,0"
-	},
-	{
-		"name":"SUCCESS_RUN",
-		"pattern":"6,#696969,2,0,#5ce700,2,0"
-	},
-	{
-		"name":"UNSTABLE",
-		"pattern":"6,#926800,2,0,#ffb100,2,0"
-	},
-	{
-		"name":"UNSTABLE_RUN",
-		"pattern":"6,#696969,1.2,0,#ffc300,2,0"
-	}
+    {
+      "name": "FAILURE",
+      "id": "FAILURE",
+      "pattern": "6,#690000,1,0,#f00000,2,0"
+    },
+    {
+      "name": "FAILURE_RUN",
+      "id": "FAILURE_RUN",
+      "pattern": "6,#696969,2,0,#f00000,2,0"
+    },
+    {
+      "name": "SUCCESS",
+      "id": "SUCCESS",
+      "pattern": "6,#5ce700,2,0,#3a9300,2,0"
+    },
+    {
+      "name": "SUCCESS_RUN",
+      "id": "SUCCESS_RUN",
+      "pattern": "6,#696969,2,0,#5ce700,2,0"
+    },
+    {
+      "name": "UNSTABLE",
+      "id": "UNSTABLE",
+      "pattern": "6,#926800,2,0,#ffb100,2,0"
+    },
+    {
+      "name": "UNSTABLE_RUN",
+      "id": "UNSTABLE_RUN",
+      "pattern": "6,#696969,1.2,0,#ffc300,2,0"
+    }
   ],
   "bigButtons": [
     {
@@ -126,7 +132,7 @@
       "actionType": "parse-json",
       "actOnNew": false,
       "blink1Id": "0",
-      "path": "C:\\Program Files\\blink1\\blink1-jenkins.ps1",
+      "path": "C:\\Program Files\\blink1\\poll-jenkins.bat",
       "intervalSecs": "30",
       "errormsg": ""
     }
