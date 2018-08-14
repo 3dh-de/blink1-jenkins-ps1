@@ -46,17 +46,18 @@ $jenkins_pass 	= "ThisPasswordIsSecretLOL"
 
 In order to set your LED depending on the Jenkins / Hudson build status the Blink(1) GUI tool needs matching color patterns:
 
-|| Jenkins build color || Blink(1) color pattern ||
-| red         		| FAILURE |
-| blue       		| SUCCESS |
-| green      		| SUCCESS |
-| yellow     		| UNSTABLE|
-| disabled   		| UNSTABLE|
-| red_anime  		| FAILURE_RUN|
-| blue_anime		| SUCCESS_RUN|
-| green_anime		| SUCCESS_RUN|
-| yellow_anime	| UNSTABLE_RUN|
-| disabled_anime |	UNSTABLE_RUN|
+| Jenkins build color | Blink(1) color pattern |
+|---------------------|------------------------|
+| red                 | FAILURE |
+| blue       		      | SUCCESS |
+| green      	       	| SUCCESS |
+| yellow     		      | UNSTABLE|
+| disabled   		      | UNSTABLE|
+| red_anime  		      | FAILURE_RUN|
+| blue_anime		      | SUCCESS_RUN|
+| green_anime		      | SUCCESS_RUN|
+| yellow_anime	      | UNSTABLE_RUN|
+| disabled_anime      |	UNSTABLE_RUN|
 
 
 ### Blink(1) task
