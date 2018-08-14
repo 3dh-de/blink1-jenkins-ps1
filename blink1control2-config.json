@@ -1,0 +1,134 @@
+{
+  "startup": {
+    "startAtLogin": true,
+    "startupPattern": "~pattern:1,#00a300,0.5,0,#000000,0.5,0",
+    "startMinimized": true,
+    "hideDockIcon": false,
+    "disableHardwareAcceleration": null,
+    "preventAppSuspension": false,
+    "shortcutPrefix": "CommandOrControl+Shift",
+    "shortcutResetKey": "R"
+  },
+  "logger": {
+    "maxEvents": 1000,
+    "ignoredSources": [],
+    "showDebug": false
+  },
+  "blink1Service": {
+    "deviceRescan": true,
+    "enableGamma": true,
+    "allowMulti": true,
+    "blink1ToUse": "0"
+  },
+  "patternsService": {
+    "playingSerialize": true
+  },
+  "patterns": [
+	{
+		"name":"FAILURE",
+		"pattern":"6,#690000,1,0,#f00000,2,0"
+	},
+	{
+		"name":"FAILURE_RUN",
+		"pattern":"6,#696969,2,0,#f00000,2,0"
+	},
+	{
+		"name":"SUCCESS",
+		"pattern":"6,#5ce700,2,0,#3a9300,2,0"
+	},
+	{
+		"name":"SUCCESS_RUN",
+		"pattern":"6,#696969,2,0,#5ce700,2,0"
+	},
+	{
+		"name":"UNSTABLE",
+		"pattern":"6,#926800,2,0,#ffb100,2,0"
+	},
+	{
+		"name":"UNSTABLE_RUN",
+		"pattern":"6,#696969,1.2,0,#ffc300,2,0"
+	}
+  ],
+  "bigButtons": [
+    {
+      "name": "Available",
+      "type": "color",
+      "color": "#00FF00"
+    },
+    {
+      "name": "Busy",
+      "type": "color",
+      "color": "#FF0000"
+    },
+    {
+      "name": "Away",
+      "type": "color",
+      "color": "#FFFF00"
+    },
+    {
+      "name": "Meeting",
+      "type": "color",
+      "color": "#0000FF"
+    },
+    {
+      "name": "Off Work",
+      "type": "color",
+      "color": "#FACC2E"
+    }
+  ],
+  "hostId": "9CB85267",
+  "apiServer": {
+    "port": 8934,
+    "host": "localhost",
+    "enabled": false
+  },
+  "eventServices": {
+    "mailService": {
+      "service": "mailService",
+      "type": "mail",
+      "enabled": true
+    },
+    "scriptService": {
+      "service": "scriptService",
+      "type": "script",
+      "enabled": true
+    },
+    "skypeService": {
+      "service": "skypeService",
+      "type": "skype",
+      "enabled": true
+    },
+    "iftttService": {
+      "type": "ifttt",
+      "service": "iftttService",
+      "intervalSecs": 10,
+      "enabled": true,
+      "baseUrl": "http://api.thingm.com/blink1/eventsall/"
+    },
+    "timeService": {
+      "type": "time",
+      "service": "timeService",
+      "enabled": true
+    }
+  },
+  "proxy": {
+    "enable": false,
+    "host": "127.0.0.1",
+    "port": "7777",
+    "username": "",
+    "password": ""
+  },
+  "eventRules": [
+    {
+      "type": "script",
+      "enabled": true,
+      "name": "ePlan Jenkins",
+      "actionType": "parse-json",
+      "actOnNew": false,
+      "blink1Id": "0",
+      "path": "C:\\Program Files\\blink1\\blink1-jenkins.ps1",
+      "intervalSecs": "30",
+      "errormsg": ""
+    }
+  ]
+}
