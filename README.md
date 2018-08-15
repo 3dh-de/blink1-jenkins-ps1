@@ -19,10 +19,10 @@ The current build status is live displayed as blinking (while build is running) 
 
 The PowerShell script to evaluate the Jenkins/Hudson JSON build status doesn't work on network shares / network profiles due to security reasons.
 
-Therefore the delivered batch-startscript assumes that all files are installed under **%PROGRAM_FILES%\blink1-jenkins-ps1\**.
+Therefore the delivered example configuration for Blink(1) Control assumes that all files are installed under `C:\Program Files\blink1-jenkins-ps1\`.
 
-1. create directory %PROGRAM_FILES%\blink1-jenkins-ps1\
-2. copy files **blink1-jenkins.ps1** and **poll-jenkins.bat** into thid dir
+1. create a directory on a local drive (not network share!), e.g.: `C:\Program Files\blink1-jenkins-ps1\`
+2. copy files `blink1-jenkins.ps1` and `poll-jenkins.bat` into thid dir
 
 ### Other OS
 
@@ -30,7 +30,7 @@ Currently this script is only tested under Windows 7+10, but should work with [P
 
 ### Jenkins URL and login data
 
-All login credentials and the Jenkins host + project path must be updated inside the **blink1-jenkins.ps1**
+All login credentials and the Jenkins host + project path must be updated inside the `blink1-jenkins.ps1`:
 
 e.g.:
 ```
